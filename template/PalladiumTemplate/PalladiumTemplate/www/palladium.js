@@ -5,9 +5,10 @@ var palladium = (function () {
 
     var palladium = {};
 
-    palladium.plugin = function (plugin, params) {
+    palladium.plugin = function (plugin, method, params) {
         webkit.messageHandlers.callbackHandler.postMessage({
             "plugin": plugin,
+            "method": method,
             "params": params
         });
     };
