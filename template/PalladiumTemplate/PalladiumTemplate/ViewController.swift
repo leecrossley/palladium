@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
+    
+    var webview: WKWebView!
+    
+    override func loadView() {
+        super.loadView()
+        
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences.javaScriptEnabled = true
+        
+        self.webview = WKWebView(frame: self.view.bounds, configuration: configuration)
+        self.view = self.webview!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let index = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+        let request = NSURLRequest(URL: NSURL.fileURLWithPath(index!)!)
+        self.webview.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
