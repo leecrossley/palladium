@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9B596E9819D17578005077A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B596E9719D17578005077A9 /* AppDelegate.swift */; };
-		9B596E9A19D17578005077A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B596E9919D17578005077A9 /* ViewController.swift */; };
 		9B596E9F19D17578005077A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B596E9E19D17578005077A9 /* Images.xcassets */; };
 		9B596EA219D17578005077A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B596EA019D17578005077A9 /* LaunchScreen.xib */; };
 		9B596EAE19D17579005077A9 /* PalladiumTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B596EAD19D17579005077A9 /* PalladiumTemplateTests.swift */; };
 		9B596EBD19D17B67005077A9 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9B596EBB19D17B67005077A9 /* index.html */; };
 		9B596EBE19D17B67005077A9 /* palladium.js in Resources */ = {isa = PBXBuildFile; fileRef = 9B596EBC19D17B67005077A9 /* palladium.js */; };
+		9B596EC119D18697005077A9 /* app.css in Resources */ = {isa = PBXBuildFile; fileRef = 9B596EBF19D18697005077A9 /* app.css */; };
+		9B596EC219D18697005077A9 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 9B596EC019D18697005077A9 /* app.js */; };
+		9B596EC819D19B2F005077A9 /* Palladium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B596EC719D19B2F005077A9 /* Palladium.swift */; };
+		9B596ECA19D19EFD005077A9 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B596EC919D19EFD005077A9 /* UIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,6 @@
 		9B596E9219D17578005077A9 /* PalladiumTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PalladiumTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B596E9619D17578005077A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B596E9719D17578005077A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B596E9919D17578005077A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B596E9E19D17578005077A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9B596EA119D17578005077A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9B596EA719D17579005077A9 /* PalladiumTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalladiumTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +40,10 @@
 		9B596EAD19D17579005077A9 /* PalladiumTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalladiumTemplateTests.swift; sourceTree = "<group>"; };
 		9B596EBB19D17B67005077A9 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		9B596EBC19D17B67005077A9 /* palladium.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = palladium.js; sourceTree = "<group>"; };
+		9B596EBF19D18697005077A9 /* app.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = app.css; sourceTree = "<group>"; };
+		9B596EC019D18697005077A9 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		9B596EC719D19B2F005077A9 /* Palladium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Palladium.swift; path = www/Palladium.swift; sourceTree = "<group>"; };
+		9B596EC919D19EFD005077A9 /* UIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +87,8 @@
 			children = (
 				9B596EBA19D17B67005077A9 /* www */,
 				9B596E9719D17578005077A9 /* AppDelegate.swift */,
-				9B596E9919D17578005077A9 /* ViewController.swift */,
+				9B596EC719D19B2F005077A9 /* Palladium.swift */,
+				9B596EC919D19EFD005077A9 /* UIManager.swift */,
 				9B596E9E19D17578005077A9 /* Images.xcassets */,
 				9B596EA019D17578005077A9 /* LaunchScreen.xib */,
 				9B596E9519D17578005077A9 /* Supporting Files */,
@@ -117,6 +124,8 @@
 		9B596EBA19D17B67005077A9 /* www */ = {
 			isa = PBXGroup;
 			children = (
+				9B596EBF19D18697005077A9 /* app.css */,
+				9B596EC019D18697005077A9 /* app.js */,
 				9B596EBB19D17B67005077A9 /* index.html */,
 				9B596EBC19D17B67005077A9 /* palladium.js */,
 			);
@@ -203,8 +212,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B596EC219D18697005077A9 /* app.js in Resources */,
 				9B596EBD19D17B67005077A9 /* index.html in Resources */,
 				9B596EA219D17578005077A9 /* LaunchScreen.xib in Resources */,
+				9B596EC119D18697005077A9 /* app.css in Resources */,
 				9B596E9F19D17578005077A9 /* Images.xcassets in Resources */,
 				9B596EBE19D17B67005077A9 /* palladium.js in Resources */,
 			);
@@ -224,8 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B596E9A19D17578005077A9 /* ViewController.swift in Sources */,
+				9B596EC819D19B2F005077A9 /* Palladium.swift in Sources */,
 				9B596E9819D17578005077A9 /* AppDelegate.swift in Sources */,
+				9B596ECA19D19EFD005077A9 /* UIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 				9B596EB319D17579005077A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B596EB419D17579005077A9 /* Build configuration list for PBXNativeTarget "PalladiumTemplateTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				9B596EB619D17579005077A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
