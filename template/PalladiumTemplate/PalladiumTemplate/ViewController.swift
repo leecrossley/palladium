@@ -1,5 +1,5 @@
 //
-//  Palladium.swift
+//  ViewController.swift
 //  PalladiumTemplate
 //
 //  Copyright (c) 2014 Palladium. All rights reserved.
@@ -8,15 +8,13 @@
 import UIKit
 import WebKit
 
-class Palladium : NSObject, WKScriptMessageHandler {
+class ViewController: UIViewController, WKScriptMessageHandler {
     
-    var rootview: UIView
-    
-    init (view:UIView) {
-        rootview = view
-    }
-    
-    func initWebKitView() {
+    var webview: WKWebView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let contentController = WKUserContentController()
         
         let src = "document.dispatchEvent(new Event('deviceready');"
@@ -28,17 +26,23 @@ class Palladium : NSObject, WKScriptMessageHandler {
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
         
-        let webView = WKWebView(frame: rootview.frame, configuration: config)
-        rootview.addSubview(webView)
+        webview = WKWebView(frame: self.view.frame, configuration: config)
+        self.view.addSubview(webview)
         
         let index = NSBundle.mainBundle().pathForResource("index", ofType: "html")
         let request = NSURLRequest(URL: NSURL(fileURLWithPath: index!))
         
-        webView.loadRequest(request)
+        webview.loadRequest(request)
     }
-    
+
     func userContentController(userContentController: WKUserContentController!, didReceiveScriptMessage message: WKScriptMessage!) {
         println(message.body)
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 }
+

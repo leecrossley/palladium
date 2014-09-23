@@ -17,14 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.whiteColor()
         
-        var manager = UIManager(window: window!)
-        manager.createStoryboard()
-        
-        window!.makeKeyAndVisible()
-        
-        Palladium(view: window!).initWebKitView()
+        self.window!.rootViewController = ViewController()
         
         return true
     }
 
 }
+
