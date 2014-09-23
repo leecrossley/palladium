@@ -36,7 +36,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
 
     func userContentController(userContentController: WKUserContentController!, didReceiveScriptMessage message: WKScriptMessage!) {
-        println(message.body)
+        Alert.alert(message.body as? String).show(self, animated: true)
     }
 
 }
