@@ -36,7 +36,9 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     }
 
     func userContentController(userContentController: WKUserContentController!, didReceiveScriptMessage message: WKScriptMessage!) {
-        Alert.alert(message.body as? String).show(self, animated: true)
+        if (message.body["plugin"] as? String == "Alert") {
+            Alert.alert(message.body["params"] as? String).show(self, animated: true)
+        }
     }
 
 }

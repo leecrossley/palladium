@@ -7,6 +7,6 @@ document.addEventListener("deviceready", function () {
     h2.appendChild(document.createTextNode("Device is ready"));
     document.body.appendChild(h2);
 
-    palladium.alert("Device is ready");
+    palladium.plugin("Alert", "Device is ready");
 
 }, false);

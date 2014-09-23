@@ -5,8 +5,11 @@ var palladium = (function () {
 
     var palladium = {};
 
-    palladium.alert = function (message) {
-        webkit.messageHandlers.callbackHandler.postMessage(message);
+    palladium.plugin = function (plugin, params) {
+        webkit.messageHandlers.callbackHandler.postMessage({
+            "plugin": plugin,
+            "params": params
+        });
     };
 
     return palladium;
