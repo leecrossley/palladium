@@ -17,7 +17,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         
         let contentController = WKUserContentController()
         
-        let src = "document.dispatchEvent(new Event('deviceready');"
+        let src = "document.dispatchEvent(new Event('deviceready'));"
         let deviceready = WKUserScript(source: src, injectionTime: .AtDocumentEnd, forMainFrameOnly: false)
         
         contentController.addUserScript(deviceready)
@@ -37,11 +37,6 @@ class ViewController: UIViewController, WKScriptMessageHandler {
 
     func userContentController(userContentController: WKUserContentController!, didReceiveScriptMessage message: WKScriptMessage!) {
         println(message.body)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
